@@ -41,7 +41,7 @@ service:
   extensions: [health_check, pprof, zpages]
   pipelines:
     traces:
-      receivers: [opencensus, jaeger, zipkin,otlp]
+      receivers: [opencensus, jaeger, zipkin, otlp]
       processors: [batch]
       exporters: [logging,logzio]
 
