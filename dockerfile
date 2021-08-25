@@ -6,7 +6,6 @@ COPY ./otel-config.yml /etc/otel/config.yaml
 RUN pip install pyyaml flask
 COPY ./config.py config.py
 COPY ./entrypoint.sh entrypoint.sh
-COPY ./api.py api.py
 COPY --from=certs /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt
 COPY otelcontribcol_linux_amd64 /otelcontribcol
 EXPOSE 4317 55680 55679 8888 6060 7276 9411 9943 1234 6831 6832 14250 14268 4317 55681 8888
