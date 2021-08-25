@@ -1,12 +1,17 @@
 # otel-collector-traces
-This docker container is running opentelemetry collector with common traces receivers `jaeger` `opencensus` `otlp` `zipkin`, and exports the traces to logz.io
+
+This docker container runs OpenTelemetry collector with the most common receivers (`jaeger` `opencensus` `otlp` `zipkin`) and exports traces to Logz.io
 
 ### Pull docker image:
+
 ```
 docker pull yotamloe/otel-collector-traces
 ```
+
 ### Run the container
-When running on linux based host use the `--network host` flag to publish the collector ports:
+
+When running on a Linux host, use the `--network host` flag to publish the collector ports:
+
 ```
 docker run \
 -e LOGZIO_REGION=<<LOGZIO_REGION>> \
@@ -14,7 +19,9 @@ docker run \
 --network host \
 yotamloe/otel-collector-traces
 ```
-When running on macos or windows host publish the ports using the `-p` flag:
+
+When running on MacOS or Windows hosts, publish the ports using the `-p` flag:
+
 ```
 docker run \
 -e LOGZIO_REGION=<<LOGZIO_REGION>> \
@@ -31,7 +38,9 @@ docker run \
 -p 55681:55681 \
 yotamloe/otel-collector-traces
 ```
+
 ### receiver ports
+
 - Jaeger
     - thrift_compact -> 6831
     - thrift_binary -> 6832
