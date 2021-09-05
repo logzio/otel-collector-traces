@@ -12,7 +12,7 @@ docker run \
 -e LOGZIO_REGION=<<LOGZIO_REGION>> \
 -e LOGZIO_TRACES_TOKEN=<<LOGZIO_TRACES_TOKEN>> \
 --network host \
-yotamloe/otel-collector-traces
+logzio/otel-collector-traces
 ```
 When running on macos or windows host publish the ports using the `-p` flag:
 ```
@@ -29,7 +29,7 @@ docker run \
 -p 14268:14268 \
 -p 4317:4317 \
 -p 55681:55681 \
-yotamloe/otel-collector-traces
+logzio/otel-collector-traces
 ```
 ### receiver ports
 - Jaeger

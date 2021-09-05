@@ -14,11 +14,11 @@ docker run \
 -p 4317:4317 \
 -p 5001:5001 \
 -p 55681:55681 \
-config-otel-py
+logzio/otel-collector-traces
 
 
-docker run \
--p 8888:8888 \
+docker run -it --rm \
+--network host \
 -e LOGZIO_REGION=us \
 -e LOGZIO_TRACES_TOKEN=fake \
-config-otel-py
+logzio/otel-collector-traces
