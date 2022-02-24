@@ -1,11 +1,12 @@
 # otel-collector-traces
 
 This docker container runs OpenTelemetry collector with the most common receivers (`jaeger` `opencensus` `otlp` `zipkin`) and exports traces to Logz.io
+Current OpenTelmetry exec version: 0.42.0
 
 ### Pull docker image:
 
 ```
-docker pull yotamloe/otel-collector-traces
+docker pull logzio/otel-collector-traces
 ```
 
 ### Run the container
